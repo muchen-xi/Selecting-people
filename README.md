@@ -1,36 +1,77 @@
-1. File Handling Module (file class):
-   - Reads personnel list from `name_list.txt` (supports Chinese encoding)
-   - Cleans data: Removes newline characters and leading/trailing double quotes from each line
-   - Processes numeric input: Uses keyboard input to select the number of people to draw (1-6)
+随机抽人程序 - 开源说明
+项目概述
+这是一个基于 Pygame 的随机抽人程序，专为课堂或活动场景设计。程序可以从预设名单中随机抽取指定数量的参与者，并记录抽取日志。
 
-2. Random Selection Algorithm:
-   - Uses `random.sample()` to ensure non-repetitive selection
-   - Dynamic list management: Selected names are removed from the current list
-   - List reset mechanism: Automatically reloads original list when remaining names are insufficient
+功能特点
+从文本文件读取名单（支持 UTF-8 编码）
 
-3. User Interaction System:
-   - Spacebar controls selection state (start/stop)
-   - Number keys 1-9 select number of people to draw
-   - Enter key confirms selection
-   - Backspace key resets number selection
+随机抽取 1-6 名参与者
 
-4. Visual Interface:
-   - Background image display
-   - Layered text rendering: Top prompts, middle name display, bottom operation guidance
-   - Name grouping: Displays names in two lines when exceeding 3 names
+可视化界面显示抽取结果
 
-5. Auxiliary Functions:
-   - Background music control (pause/resume)
-   - Operation logging: Saves selected names with UTC timestamps to `log.txt`
-   - Input validation: Limits selection count (1-6 people) with error prompts
+背景音乐播放与控制
 
-Workflow:
-1. Initialize background image and music
-2. Phase 1: Input selection count using number keys (1-6 people)
-3. Phase 2: Press spacebar to start random selection
-4. Display selected names
-5. Press spacebar again to confirm, record log and update list
-6. Repeat for new selections
+抽取记录保存到日志文件
+
+简洁直观的用户界面
+
+运行要求
+Python 3.x
+
+Pygame 库
+
+安装与使用
+安装依赖：
+
+text
+pip install pygame
+准备资源文件：
+
+name_list.txt - 参与者名单（每行一个名字）
+
+background.png - 背景图片
+
+music.mp3 - 背景音乐
+
+STKAITI.TTF - 中文字体文件
+
+运行程序：
+
+text
+python main.py
+操作说明
+启动程序后，输入需要抽取的人数（1-6）
+
+按回车键确认
+
+按空格键开始/停止随机抽取
+
+抽取结果将显示在屏幕上并保存到日志文件
+
+文件结构
+text
+main.py          # 主程序
+name_list.txt    # 参与者名单
+background.png   # 背景图片
+music.mp3        # 背景音乐
+STKAITI.TTF      # 字体文件
+log.txt          # 抽取记录（自动生成）
+代码说明
+程序主要包含两个类：
+
+file 类：处理文件操作（读取名单、选择随机名字）
+
+window 类：管理界面显示
+
+主循环处理用户输入和程序状态切换，实现交互式抽取过程。
+
+开源协议
+本项目采用 MIT 协议开源，允许自由使用、修改和分发。
+
+贡献指南
+欢迎提交 Issue 和 Pull Request 来改进这个项目。
+
+作者信息
+由 Muhongda 和 Liuxueyan 共同开发。
 
 
-This program is suitable for scenarios requiring random selection like classroom Q&A or prize draws, featuring a clean, user-friendly interface with intuitive operation logic.
