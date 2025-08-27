@@ -72,6 +72,6 @@ window 类：管理界面显示
 欢迎提交 Issue 和 Pull Request 来改进这个项目。
 
 作者信息
-由 Muhongda 和 Liuxueyan 共同开发。
+由 Muhongda开发。
 
 
