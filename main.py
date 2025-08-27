@@ -1,9 +1,7 @@
 import pygame
 import random
 from datetime import datetime, timezone
-"""
-Power by Muhongda and Liuxueyan
-"""
+
 
 utc_time = datetime.now(timezone.utc)
 print(utc_time)  # 输出示例：2024-06-07 06:20:34.567890+00:00
@@ -208,4 +206,5 @@ if __name__ == "__main__":
 
             write_text([1100,635],"到你了")
             write_text([1000,750],text_under)
+
         pygame.display.update()
