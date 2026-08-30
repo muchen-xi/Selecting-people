@@ -293,7 +293,7 @@ if __name__ == "__main__":
                             if len(text_file.numbers) < 2:  # 最多2位，防止溢出屏幕
                                 text_file.numbers.append(event.key - pygame.K_0)
                                 attention = ""
-                        elif 89 <= event.scancode <= 97:
+                        elif 89 <= getattr(event, 'scancode', -1) <= 97:
                             # 小键盘 1-9（scancode=物理键位，NumLock 开关都有效）
                             if len(text_file.numbers) < 2:
                                 text_file.numbers.append(event.scancode - 88)
